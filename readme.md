@@ -57,7 +57,7 @@ Nano ESP32       BLE    MKR WiFi 1010     →      12V Pump
 
 ### 🛒 **Complete Shopping List**
 
-**➤ [Amazon Wishlist - Complete Kit](https://www.amazon.com/hz/wishlist/ls/1B76IUPF3OXJ4?ref_=wl_share)**  
+**➤ [Project Parts List *Amazon* - Complete Kit](https://github.com/MikeMester/MoistureSensor/blob/main/parts.md)**  
 *All required components in one convenient list for easy ordering*
 
 ### Sensor Unit (Nano ESP32)
