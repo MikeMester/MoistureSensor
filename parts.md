@@ -9,7 +9,7 @@
 | Generic 40 Pin Breakaway Headers 0.1" Male Equal Length Long Centered 6.25mm on Both Sides 15mm in Total(pack of 10) | https://a.co/d/c8LjfAN	| $8.49 |
 | Baseus USB C Cable, 100W PD 5A QC 4.0 Fast Charging USB C to USB C Cable, Zinc Alloy Nylon Braided Type C Data Cable for Samsung S21 S20+ S10 Note 10 iPad Pro MacBook Pro Google Pixel and More (2M) | https://a.co/d/0QLWj6f |	$9.99 |
 | LISEN 2-Pack USB C to Micro USB Cable 3.3FT Nylon Braided, Micro USB Cable PS4 Controller Charger, 2.4A Charging&480Mbps Data Transmission, for Type C Wall Chargers/PS4/Xbox One/Old Kindle/Android | https://a.co/d/auzc0Cx | $7.59 |
-| ENERJOUR 22 Gauge Silicone Wire 6 Colors Each Spool 26FT, 22 AWG Ultra Flexible Silicone Stranded Electrical Cable Tinned Copper Hook up Wiring kit for 12V 24V, DIY, Automotive, Battery | https://a.co/d/bsrRFcd | $15.99 |
+| ENERJOUR 22 Gauge Silicone Wire 6 Colors Each Spool 26FT, 22 AWG Ultra Flexible Silicone Stranded Electrical Cable Tinned Copper Hook up Wiring kit for 12V 24V, DIY, Automotive, Battery | https://a.co/d/j4g2ynM | $15.99 |
 | Arduino MKR WiFi 1010 [ABX00023] – 32-bit ARM Cortex-M0+, WiFi & Bluetooth Connectivity, 250KB Flash, 32KB SRAM, Secure Element, 14 Digital I/O Pins, 6 Analog Inputs, Compatible with Arduino IDE | https://a.co/d/9DYT1IR |	$36.59 |
 | Arduino MKR Relay Proto Shield [TSX00003] | https://a.co/d/gzFnMwp | $20.50 |
 | Arduino Nano ESP32 with Headers [ABX00083] – ESP32-S3, USB-C, Wi-Fi, Bluetooth, HID Support, MicroPython Compatible for IoT & Embedded Projects | https://a.co/d/hDLeYu1 | $20.90 |
