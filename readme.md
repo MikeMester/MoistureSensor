@@ -133,14 +133,7 @@ if (millis() - lastReading > interval) {
 - **Why**: Allows multiple operations simultaneously
 - **Learning**: Critical for responsive IoT devices
 
-#### 3. **Wireless Communication**
-```cpp
-moistureCharacteristic.writeValue(moisturePercent);
-```
-- **Why**: Enables distributed sensor networks
-- **Learning**: Foundation of IoT connectivity
-
-#### 4. **Sensor Calibration**
+#### 3. **Sensor Calibration**
 ```cpp
 int moisturePercent = map(sensorValue, dryValue, wetValue, 0, 100);
 ```
@@ -241,7 +234,6 @@ Pump (-)        → 12V Adapter (-) (direct connection)
 ```
 Tools → Manage Libraries → Install:
 - ArduinoBLE
-- WiFiNINA  
 - Adafruit GFX Library
 - Adafruit SSD1306
 ```
@@ -260,22 +252,9 @@ Tools → Manage Libraries → Install:
 
 ### Step 2: Upload Control Code
 1. **Open** control unit code
-2. **Create arduino_secrets.h file**:
-   - Click dropdown arrow next to filename tab
-   - Select "New Tab"
-   - Name it exactly: `arduino_secrets.h`
-   - Add this content:
-   ```cpp
-   #define SECRET_SSID "YOUR_WIFI_SSID"
-   #define SECRET_PASS "YOUR_WIFI_PASSWORD"
-   ```
-3. **Verify include statement** uses quotes (not angle brackets):
-   ```cpp
-   #include "arduino_secrets.h"    // Quotes for local files
-   ```
-4. **Save both files** (Ctrl+S on each tab)
-5. **Select** MKR WiFi 1010 board
-6. **Upload** and verify BLE connection
+2. **Save file** (Ctrl+S on each tab)
+3. **Select** MKR WiFi 1010 board
+4. **Upload** and verify BLE connection
 
 **📝 Note**: Use `"quotes"` for local files, `<brackets>` for libraries!
 
