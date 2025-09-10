@@ -1,20 +1,15 @@
 // MKR1010_Plant_Monitor_Standalone.ino
 // Complete IoT plant monitoring system - no cloud dependencies
 // Educational version focusing on core IoT concepts
+// WiFi functionality removed for faster startup and standalone operation
 
 #include <SPI.h>
-#include <WiFiNINA.h>
 #include <ArduinoBLE.h>
 #include <Wire.h>
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1306.h>
 
-#include "arduino_secrets.h"
 // -- Configuration --
-// -- WiFi Credentials --
-char ssid[] = SECRET_SSID;        // Your network SSID (name)
-char pass[] = SECRET_PASS;        // Your network password
-
 // -- Pump Logic Configuration --
 const int MOISTURE_LOW_THRESHOLD = 30;   // Start pump when moisture < 30%
 const int MOISTURE_HIGH_THRESHOLD = 60;  // Stop pump when moisture > 60%
@@ -62,6 +57,7 @@ void setup() {
   Serial.println("✓ OLED status display");
   Serial.println("✓ Data logging to Serial");
   Serial.println("✓ Historical data tracking");
+  Serial.println("✓ Standalone operation (no WiFi)");
   Serial.println("====================================\n");
 
   systemStartTime = millis();
@@ -78,9 +74,6 @@ void setup() {
   pinMode(relayPin, OUTPUT);
   digitalWrite(relayPin, LOW);
   Serial.println("✓ Pump relay initialized");
-
-  // -- Connect to WiFi (for time sync and future features) --
-  connectToWiFi();
 
   // -- Initialize BLE --
   if (!BLE.begin()) {
@@ -279,10 +272,7 @@ void printSystemStatus() {
   int seconds = uptime % 60;
   
   Serial.println("⏰ System uptime: " + String(hours) + "h " + String(minutes) + "m " + String(seconds) + "s");
-  Serial.println("🌐 WiFi status: " + String(WiFi.status() == WL_CONNECTED ? "Connected" : "Disconnected"));
-  if (WiFi.status() == WL_CONNECTED) {
-    Serial.println("📶 Signal strength: " + String(WiFi.RSSI()) + " dBm");
-  }
+  Serial.println("📡 Operation mode: Standalone (no WiFi)");
   Serial.println("💧 Current moisture: " + String(lastMoisture) + "%");
   Serial.println("🚰 Pump status: " + String(isPumping ? "RUNNING" : "STOPPED"));
   Serial.println("🔄 Total watering cycles: " + String(totalWateringCycles));
@@ -325,31 +315,6 @@ void updateDisplay(const String& line1, const String& line2, const String& line3
   display.display();
 }
 
-void connectToWiFi() {
-  Serial.println("🌐 Connecting to WiFi for time sync...");
-  
-  int attempts = 0;
-  while (WiFi.status() != WL_CONNECTED && attempts < 10) {
-    Serial.print("   Attempt " + String(attempts + 1) + "/10: ");
-    WiFi.begin(ssid, pass);
-    delay(3000);
-    
-    if (WiFi.status() == WL_CONNECTED) {
-      Serial.println("✓ Connected!");
-      Serial.println("   IP: " + WiFi.localIP().toString());
-      Serial.println("   Signal: " + String(WiFi.RSSI()) + " dBm");
-    } else {
-      Serial.println("Failed");
-      attempts++;
-    }
-  }
-  
-  if (WiFi.status() != WL_CONNECTED) {
-    Serial.println("⚠️  WiFi connection failed - continuing without network");
-    Serial.println("   (Plant monitoring will work offline)");
-  }
-}
-
 void printSystemInfo() {
   Serial.println("⚙️  SYSTEM CONFIGURATION");
   Serial.println("========================");
@@ -358,5 +323,6 @@ void printSystemInfo() {
   Serial.println("⏱️  Max pump runtime: " + String(PUMP_TIMEOUT_SECONDS) + " seconds");
   Serial.println("📊 Data logging interval: 10 seconds");
   Serial.println("📈 History buffer: 10 readings");
+  Serial.println("🌐 Network mode: Standalone (no WiFi)");
   Serial.println("========================\n");
 }
