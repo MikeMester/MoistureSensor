@@ -20,7 +20,7 @@ const int buttonPin = 2;
 // BLE Service and Characteristics  
 BLEService plantService("a70a845a-115f-4e39-9628-654a3e532168");  
 BLEUnsignedIntCharacteristic moistureCharacteristic("3c8737b8-386d-49a3-832f-3b136423d20d", BLERead | BLENotify);  
-BLECharCharacteristic commandCharacteristic("88e88457c-2101-44a6-b452-166258f33333", BLEWrite);
+BLECharCharacteristic commandCharacteristic("8e88457c-2101-44a6-b452-166258f33333", BLEWrite);
 
 enum Mode { NORMAL, CONTINUOUS };  
 Mode currentMode = NORMAL;

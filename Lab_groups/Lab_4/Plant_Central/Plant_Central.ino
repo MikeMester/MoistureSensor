@@ -24,7 +24,7 @@ Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 
 // BLE Service and Characteristics UUIDs
 const char* serviceUuid = "da3db78d-448f-7f6c-c95b-987d60865491";
-const char* moistureCharUuid = "6fba6aeb-6b9f-7cd6-b651-6e469756g530";
+const char* moistureCharUuid = "6fba6aeb-6b9f-7cd6-b651-6e469756f530";
 const char* commandCharUuid = "b1bb78af-5434-77d9-e785-499581266666";
 
 // BLE objects
